@@ -1,7 +1,8 @@
 use crate::hostcalls::raw;
 use std::os::raw::c_void;
 
-extern "C" fn default_malloc_impl(size: usize) -> *mut c_void {
+#[no_mangle]
+pub extern "C" fn default_malloc_impl(size: usize) -> *mut c_void {
     let v = vec![0u8; size].into_boxed_slice();
     Box::into_raw(v) as _
 }
@@ -12,7 +13,8 @@ pub fn free(ptr: *mut c_void) {
     }
 }
 
-extern "C" fn default_free_impl(ptr: *mut c_void) {
+#[no_mangle]
+pub extern "C" fn default_free_impl(ptr: *mut c_void) {
     free(ptr)
 }
 
