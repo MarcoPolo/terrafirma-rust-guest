@@ -1,8 +1,8 @@
 [package]
 name = "http_guest"
 version = "0.1.0"
-authors = ["Fastly Labs <labs@fastly.com>"]
-repository = "https://github.com/fastly/terrarium-rust-guest"
+authors = ["Marco Munizaga", "Fastly Labs <labs@fastly.com>"]
+repository = "https://github.com/marcopolo/terrafirma-rust-guest"
 documentation = "https://wasm.fastlylabs.com/docs/rust/http_guest/index.html"
 license = "MIT OR Apache-2.0"
 edition = "2018"

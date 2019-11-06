@@ -134,6 +134,6 @@ fn build_resp(resp: Response<Vec<u8>>) {
             .collect();
         out.set_header(name.as_str(), &values);
     }
-    out.set_body(resp.body());
     out.set_response_code(resp.status().as_u16());
+    out.set_body(resp.body());
 }
